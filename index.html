@@ -11,8 +11,6 @@
     />
     <link rel="stylesheet" href="style.css" />
     <title>Frontend Mentor | Tip calculator app</title>
-
-    </style>
   </head>
   <body>
     <header><img src="images/logo.svg" alt="Logo" /></header>
@@ -22,31 +20,34 @@
           <label for="bill">Bill</label>
           <div class="input-box">
             <input
-              type="text"
+              type="number"
               name="bill"
               class="doller"
-              value="0"
-              pattern="^([0-9]{0,9})(\.{0,1})([0-9]{0,2})$"
+              id="bill"
               min="0"
+              onkeyup="calculator()"
+              placeholder="Bill Amount"
             />
-            <img src="images/icon-dollar.svg" alt="icon-doller" class="icon" />
+            <span class="icon" id="bill-icon"></span>
           </div>
         </article>
         <article class="row-2">
           <label for="select-tip">Select Tip %</label>
           <ul class="grid nav">
-            <li class="grid-item">5%</li>
-            <li class="grid-item">10%</li>
-            <li class="grid-item">15%</li>
-            <li class="grid-item">25%</li>
-            <li class="grid-item">50%</li>
+            <li class="grid-item" value="5">5%</li>
+            <li class="grid-item" value="10">10%</li>
+            <li class="grid-item" value="15">15%</li>
+            <li class="grid-item" value="25">25%</li>
+            <li class="grid-item" value="50">50%</li>
             <li class="grid-item">
               <input
                 type="number"
                 placeholder="Custom"
                 class="custom-tip"
-                min="0"
+                id="custom-tip"
+                min="1"
                 max="100"
+                onkeyup="calculator()"
               />
             </li>
           </ul>
@@ -59,10 +60,12 @@
               type="number"
               name="number-of-people"
               class="person"
+              id="person"
               value="1"
               min="1"
+              onkeyup="calculator()"
             />
-            <img src="images/icon-person.svg" alt="icon-person" class="icon" />
+            <span id="person-icon" class="icon"></span>
           </div>
         </article>
       </section>
@@ -73,7 +76,7 @@
             <p class="text-person">/ Person</p>
           </div>
           <div class="box-content">
-            <h1 class="number">$0.00</h1>
+            <h1 class="number" id="tip-amount">$0.00</h1>
           </div>
         </article>
         <article class="row-1 box">
@@ -82,11 +85,11 @@
             <p class="text-person">/ Person</p>
           </div>
           <div class="box-content">
-            <h1 class="number">$0.00</h1>
+            <h1 class="number" id="total">$0.00</h1>
           </div>
         </article>
         <article class="row-2">
-          <button class="btn" type="submit">RESET</button>
+          <button class="btn btn-disable" id="btn" type="submit">RESET</button>
         </article>
       </section>
     </section>
@@ -96,5 +99,7 @@
         >Frontend Mentor</a
       >. Coded by <a href="#">Meysam Minooey</a>.
     </footer>
+    <!-- java scripts -->
+    <script src="index.js"></script>
   </body>
 </html>
