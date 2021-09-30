@@ -49,13 +49,14 @@ input {
   line-height: 36px;
   padding: 6px 15px 6px 35px;
   color: #00474b;
+  border: 2px solid transparent;
 }
 input:focus {
-  border: 1px solid #26c2ae;
+  border: 2px solid #26c2ae;
   outline: none;
 }
 input:invalid {
-  border: 1px solid #e17052;
+  border: 2px solid #e17052;
 }
 label {
   font-family: "Space Mono";
@@ -199,7 +200,7 @@ input.custom-tip {
   transition: all 0.2s ease;
   outline: none;
   border: none;
-  margin-top: 75px;
+  margin-top: 65px;
   cursor: pointer;
 }
 .btn-hover:hover {
