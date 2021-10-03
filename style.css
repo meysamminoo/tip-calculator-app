@@ -1,6 +1,16 @@
 @font-face {
   font-family: "Space Mono";
+  font-style: normal;
+  font-display: auto;
+  font-weight: 400;
   src: url(fonts/SpaceMono-Regular.ttf);
+}
+@font-face {
+  font-family: "Space Mono";
+  font-style: normal;
+  font-display: auto;
+  font-weight: 700;
+  src: url(fonts/SpaceMono-Bold.ttf);
 }
 /* remove default style input with type number */
 /* Chrome, Safari, Edge, Opera */
@@ -43,7 +53,7 @@ input {
   border-radius: 5px;
   background-color: #f3f9fa;
   font-family: "Space Mono";
-  font-weight: bold;
+  font-weight: 700;
   font-size: 24px;
   text-align: right;
   line-height: 36px;
@@ -62,7 +72,7 @@ label {
   font-family: "Space Mono";
   font-size: 16px;
   line-height: 24px;
-  font-weight: bold;
+  font-weight: 700;
   font-style: normal;
   color: #5e7a7d;
 }
@@ -115,7 +125,7 @@ label {
   height: 48px;
   padding-top: 5px;
   font-family: "Space Mono";
-  font-weight: bold;
+  font-weight: 700;
   font-size: 24px;
   line-height: 36px;
   color: #fff;
@@ -173,7 +183,7 @@ input.custom-tip {
 .error-message {
   color: #e17052;
   font-family: "Space Mono";
-  font-weight: bold;
+  font-weight: 700;
   font-size: 16px;
   line-height: 24px;
   text-align: right;
@@ -190,7 +200,7 @@ input.custom-tip {
   width: 100%;
   height: 48px;
   font-family: "Space Mono";
-  font-weight: bold;
+  font-weight: 700;
   font-size: 20px;
   line-height: 30px;
   text-align: center;
@@ -214,7 +224,7 @@ input.custom-tip {
 .box {
   display: flex;
   font-family: "Space Mono";
-  font-weight: bold;
+  font-weight: 700;
   margin-bottom: 20px;
 }
 .box-content {
@@ -240,7 +250,9 @@ input.custom-tip {
   color: #26c2ae;
 }
 .attribution {
-  font-size: 11px;
+  font-family: "Space Mono";
+  font-weight: 700;
+  font-size: 14px;
   text-align: center;
 }
 .attribution a {
@@ -289,5 +301,8 @@ input.custom-tip {
   }
   .tip-amount {
     padding-top: 5px;
+  }
+  .attribution {
+    font-weight: 400;
   }
 }
